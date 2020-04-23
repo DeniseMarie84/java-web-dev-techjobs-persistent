@@ -1,8 +1,8 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 public class Skill extends AbstractEntity {
 
+    @NotBlank(message="Please add a description of skills")
     @Size(max=255)
     private String description;
 
